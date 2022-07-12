@@ -230,7 +230,7 @@ if __name__ == "__main__":
 	# dictionaries
 # 	class_names = os.listdir(train_dir)
 # 	class_names.sort()
-	class_names = sorted((f for f in os.listdir(train_path) if not f.startswith(".")), key=str.lower)
+	class_names = sorted((f for f in os.listdir(train_dir) if not f.startswith(".")), key=str.lower)
 	label2name = {i : name for (i,name) in enumerate(class_names)}
 	IDcoarse_names = root.children_names()
 
