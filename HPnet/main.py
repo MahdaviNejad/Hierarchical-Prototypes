@@ -108,14 +108,14 @@ if __name__ == "__main__":
 	    transform_push)
 	train_push_loader = torch.utils.data.DataLoader(
 	    train_push_dataset, batch_size=train_push_batch_size, shuffle=False,
-	    num_workers=4, pin_memory=False)
+	    num_workers=2, pin_memory=False) # colab has 2 workers 4-->2
 	# valid set
 	valid_dataset = datasets.ImageFolder(
 	    valid_dir,
 	    transform_test)
 	valid_loader = torch.utils.data.DataLoader(
 	    valid_dataset, batch_size=valid_batch_size, shuffle=False,
-	    num_workers=4, pin_memory=False)
+	    num_workers=2, pin_memory=False) # colab has 2 workers 4-->2
 
 	log('training set size: {0}'.format(len(train_loader.dataset)))
 	log('push set size: {0}'.format(len(train_push_loader.dataset)))
