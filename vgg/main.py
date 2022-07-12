@@ -140,8 +140,9 @@ if __name__ == "__main__":
 	root.assign_all_descendents()
 
 	# name dictionary
-	class_names = os.listdir(train_dir)
-	class_names.sort()
+# 	class_names = os.listdir(train_dir)
+# 	class_names.sort()
+	class_names = sorted((f for f in os.listdir(train_path) if not f.startswith(".")), key=str.lower)
 	label2name = {i : name for (i,name) in enumerate(class_names)}
 
 
