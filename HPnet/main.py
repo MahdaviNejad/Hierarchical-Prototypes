@@ -101,7 +101,7 @@ if __name__ == "__main__":
 	    transform_train)
 	train_loader = torch.utils.data.DataLoader(
 	    train_dataset, batch_size=train_batch_size, shuffle=True,
-	    num_workers=4, pin_memory=False)
+	    num_workers=2, pin_memory=False)# colab has 2 workers 4-->2
 	# push set
 	train_push_dataset = datasets.ImageFolder(
 	    train_push_dir,
